@@ -10,13 +10,19 @@ export default function SettingsScreen() {
             <Text style={styles.title}>Settings</Text>
             <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 
-            {/* Use a light status bar on iOS to account for the black space above the modal */}
-            <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
-            <Link href="/settings/alerts" asChild>
+            <Link href={{ pathname: "/settings/alerts", params: { count: 4 }}} asChild>
                 <Pressable>
-                    <Text>Alerts</Text>
+                    <Text style={styles.link}>4 Alerts</Text>
                 </Pressable>
             </Link>
+
+            <Link href={{ pathname: "/settings/alerts", params: { count: 2 }}} asChild>
+                <Pressable>
+                    <Text style={styles.link}>2 Alerts</Text>
+                </Pressable>
+            </Link>
+            {/* Use a light status bar on iOS to account for the black space above the modal */}
+            <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
         </View>
     );
 }
@@ -36,4 +42,9 @@ const styles = StyleSheet.create({
         height: 1,
         width: '80%',
     },
+    link: {
+        marginVertical: 4,
+        color: '#2f95dc',
+        textDecorationLine: 'underline'
+    }
 });

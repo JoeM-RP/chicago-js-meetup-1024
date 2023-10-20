@@ -128,6 +128,7 @@ Invalid call at line 11: process.env.EXPO_ROUTER_APP_ROOT First argument of requ
 - Migrate Modal - this is a 1:1 copy because there is no navigation component
     - move `ModalScreen.tsx` and rename to `modal.tsx`
 - Add `(tabs)` directory and `(tabs)/_layout.tsx` to define tab frame
+    - `()` denotes group syntax, such that the value does not appear in the URL on the web. e.g - `(tabs)/home` would appear as `/home` in the nav bar
 - Add tabs
     - Copy `TabOneScreen.tsx` to `(tabs)/index.tsx`
     - Copy `TabTwoScreen.tsx` to `(tabs)/two.tsx`
@@ -165,7 +166,7 @@ Invalid call at line 11: process.env.EXPO_ROUTER_APP_ROOT First argument of requ
     import { Stack } from 'expo-router/stack';
 
     export default function Layout() {
-        return <Stack screenOptions={{ headerShown: true, headerTitle: 'Settings' }} />;
+        return <Stack screenOptions={{ headerShown: true, headerTitle: 'Settings', headerBackTitleVisible: false }} />;
     }
     ```
     - Add `/settings/index.tsx` & link to alerts
@@ -184,6 +185,8 @@ Invalid call at line 11: process.env.EXPO_ROUTER_APP_ROOT First argument of requ
         </Pressable>
     </Link>
     ```
+
+- Add parameter handling
 
 ### Recap
 
