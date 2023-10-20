@@ -151,12 +151,37 @@ Invalid call at line 11: process.env.EXPO_ROUTER_APP_ROOT First argument of requ
     </Link>
     ```
 - Let's add a new page
-    - Add a button
+    - Add a button to link to a top-level route
     ```html
     <Link href="/other" asChild>
       <Pressable>
-        <Text>Home</Text>
+        <Text>Other</Text>
       </Pressable>
+    </Link>
+    ```
+- Let's add a nested page --> settings
+    - Add `/settings/_layout.tsx`
+    ```javascript
+    import { Stack } from 'expo-router/stack';
+
+    export default function Layout() {
+        return <Stack screenOptions={{ headerShown: true, headerTitle: 'Settings' }} />;
+    }
+    ```
+    - Add `/settings/index.tsx` & link to alerts
+    ```html
+    <Link href="/settings/alerts" asChild>
+        <Pressable>
+            <Text>Alerts</Text>
+        </Pressable>
+    </Link>
+    ```
+    - Add `/settings/alerts.tsx`
+    ```html
+    <Link href="/other" asChild>
+        <Pressable>
+        <Text>Other</Text>
+        </Pressable>
     </Link>
     ```
 
