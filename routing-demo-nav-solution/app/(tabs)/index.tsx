@@ -1,16 +1,21 @@
-import { StyleSheet } from 'react-native';
+import { Pressable, StyleSheet } from 'react-native';
 
-import EditScreenInfo from '../components/EditScreenInfo';
-import { Text, View } from '../components/Themed';
-import { RootTabScreenProps } from '../types';
+import EditScreenInfo from '../../components/EditScreenInfo';
+import { Text, View } from '../../components/Themed';
+import { Link } from 'expo-router';
 
-export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
+export default function TabOneScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Tab One</Text>
-      <Text style={styles.subtitle}>@react-navigation/native</Text>
+      <Text style={styles.subtitle}>@expo-router</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <EditScreenInfo path="/screens/TabOneScreen.tsx" />
+      <Link href="/other" asChild>
+        <Pressable>
+          <Text>Other</Text>
+        </Pressable>
+      </Link>
     </View>
   );
 }
