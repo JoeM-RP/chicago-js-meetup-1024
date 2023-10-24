@@ -48,6 +48,7 @@ https://www.meetup.com/js-chi/events/288524211
     - Multiple navigators (stack, bottom tab)
 
 ### Convert `react-navigation/native` base project 
+- Clone this repo and run the following: `cd routing-demo-nav && yarn && yarn start`
 - Follows: [Manual Installation](https://docs.expo.dev/routing/installation/#manual-installation)
 - Upgrade to Expo 49 (if you haven't already) `yarn add expo@^49.0.0 && npx expo install --fix`
 - Add dependencies: `npx expo install expo-router react-native-safe-area-context react-native-screens expo-linking expo-constants expo-status-bar react-native-gesture-handler`
