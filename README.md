@@ -60,7 +60,7 @@ https://www.meetup.com/js-chi/events/288524211
         }
         ```
 - Edit project configuration
-    - Add a deep linking scheme in your app config:
+    - Add a deep linking scheme (e.g - `myapp://home/root/some-cool-page`) in your app config:
     `app.json`
         ```json
         {
