@@ -5,6 +5,7 @@ https://www.meetup.com/js-chi/events/288524211
 
 ### What is expo?
 - What is file-based navigation? [Introduction to Expo Router](https://docs.expo.dev/routing/introduction/)
+    
     _"It brings the best file-system routing concepts from the web to a universal application — allowing your routing to work across every platform. When a file is added to the app directory, the file automatically becomes a route in your navigation."_
     - **Native:** Built on top of our powerful React Navigation suite, Expo Router navigation is truly native and platform-optimized by default.
     - **Shareable:** Every screen in your app is automatically deep linkable. Making any route in your app shareable with links.
