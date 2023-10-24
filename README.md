@@ -113,7 +113,7 @@ https://www.meetup.com/js-chi/events/288524211
 
 - Build the directory:
     - Add `/app`
-    - Make `_layout.tsx` // this is the app "frame" that will be present on all pages - replaces `App.tsx``
+    - Make `_layout.tsx` // this is the app "frame" that will be present on all pages - replaces `App.tsx`
 - Make a custom "not found" page, `[...missing].tsx`
     - Reload, now we get our custom "missing" page instead of the default
     ```javascript
