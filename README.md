@@ -88,14 +88,12 @@ https://www.meetup.com/js-chi/events/288524211
             ],      
         ```
 - `npx expo start --clear` --> explosion
-    - `EXPO_ROUTER_APP_ROOT not defined``
-If process.env.EXPO_ROUTER_APP_ROOT is not defined you'll see the following error:
-```
-Invalid call at line 11: process.env.EXPO_ROUTER_APP_ROOT First argument of require.context should be a string.
-```
-
+    - `EXPO_ROUTER_APP_ROOT not defined` 
+    
+        If process.env.EXPO_ROUTER_APP_ROOT is not defined you'll see the following error: 
+    
+    `Invalid call at line 11: process.env.EXPO_ROUTER_APP_ROOT First argument of require.context should be a string.`
     - This can happen when:
-
         - The project is using an expo version lower than expo@^46.0.13. Version 46.0.13 enables context modules and injects process.env.EXPO_ROUTER_APP_ROOT into the process.
 
         - The babel plugin expo-router/babel is not being used in the project babel.config.js. You can try clearing the cache with: `npx expo start --clear`
