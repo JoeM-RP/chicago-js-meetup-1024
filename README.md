@@ -94,11 +94,11 @@ If process.env.EXPO_ROUTER_APP_ROOT is not defined you'll see the following erro
 Invalid call at line 11: process.env.EXPO_ROUTER_APP_ROOT First argument of require.context should be a string.
 ```
 
- - This can happen when:
+    - This can happen when:
 
-    - The project is using an expo version lower than expo@^46.0.13. Version 46.0.13 enables context modules and injects process.env.EXPO_ROUTER_APP_ROOT into the process.
+        - The project is using an expo version lower than expo@^46.0.13. Version 46.0.13 enables context modules and injects process.env.EXPO_ROUTER_APP_ROOT into the process.
 
-    - The babel plugin expo-router/babel is not being used in the project babel.config.js. You can try clearing the cache with: `npx expo start --clear`
+        - The babel plugin expo-router/babel is not being used in the project babel.config.js. You can try clearing the cache with: `npx expo start --clear`
 - Add metro config
     ```
     // Learn more https://docs.expo.io/guides/customizing-metro
@@ -115,7 +115,7 @@ Invalid call at line 11: process.env.EXPO_ROUTER_APP_ROOT First argument of requ
 
 - Build the directory:
     - Add `/app`
-    - Make `_layout.tsx` // this is the app "frame" that will be present on all pages
+    - Make `_layout.tsx` // this is the app "frame" that will be present on all pages - replaces `App.tsx``
 - Make a custom "not found" page, `[...missing].tsx`
     - Reload, now we get our custom "missing" page instead of the default
     ```javascript
@@ -123,7 +123,7 @@ Invalid call at line 11: process.env.EXPO_ROUTER_APP_ROOT First argument of requ
         return ()
     }
     ```
-- Add `+html.tsx` shim
+- Add `+html.tsx` shim (optional)
 - Migrate Modal - this is a 1:1 copy because there is no navigation component
     - move `ModalScreen.tsx` and rename to `modal.tsx`
 - Add `(tabs)` directory and `(tabs)/_layout.tsx` to define tab frame
