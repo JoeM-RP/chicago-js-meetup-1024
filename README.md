@@ -97,15 +97,15 @@ https://www.meetup.com/js-chi/events/288524211
         - The project is using an expo version lower than expo@^46.0.13. Version 46.0.13 enables context modules and injects process.env.EXPO_ROUTER_APP_ROOT into the process.
 
         - The babel plugin expo-router/babel is not being used in the project babel.config.js. You can try clearing the cache with: `npx expo start --clear`
-- Add metro config
-    ```
+- Add metro.config.js
+    ```javascript
     // Learn more https://docs.expo.io/guides/customizing-metro
     const { getDefaultConfig } = require('expo/metro-config');
 
     /** @type {import('expo/metro-config').MetroConfig} */
     const config = getDefaultConfig(__dirname, {
-    // [Web-only]: Enables CSS support in Metro.
-    isCSSEnabled: true,
+        // [Web-only]: Enables CSS support in Metro.
+        isCSSEnabled: true,
     });
 
     module.exports = config;
