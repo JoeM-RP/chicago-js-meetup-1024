@@ -5,8 +5,6 @@ https://www.meetup.com/js-chi/events/288524211
 
 ### What is expo?
 - What is file-based navigation? [Introduction to Expo Router](https://docs.expo.dev/routing/introduction/)
-    - TODO: what plain react.js alternatives are there?
-    
     _"It brings the best file-system routing concepts from the web to a universal application — allowing your routing to work across every platform. When a file is added to the app directory, the file automatically becomes a route in your navigation."_
     - **Native:** Built on top of our powerful React Navigation suite, Expo Router navigation is truly native and platform-optimized by default.
     - **Shareable:** Every screen in your app is automatically deep linkable. Making any route in your app shareable with links.
@@ -15,7 +13,7 @@ https://www.meetup.com/js-chi/events/288524211
     - **Discoverable:** Expo Router enables build-time static rendering on web, and universal linking to native. Meaning your app content can be indexed by search engines.
     - You can use Expo Router in a "plain" React native App: Due to the deep connection between the router and the bundler, Expo Router is only available in Expo CLI projects, with Metro. But! you can use Expo CLI in any React Native project
 - Download Expo Go from your favorite App Store for Android or iOS, or play along from your browser:
-    - TODO: link
+    - [Expo Snack](https://snack.expo.dev/)
 - Review react-navigation-native starting point project [Getting Started](https://reactnavigation.org/docs/getting-started/)
     - Similar libraries for React/Web solutions: https://reactrouter.com/
     ```javascript
